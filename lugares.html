@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Qué hay cerca?</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1e1e1e;
+      color: #fff;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 30px;
+    }
+
+    .place {
+      margin-bottom: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .place img {
+      width: 30%;
+      border-radius: 10px;
+      margin: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .place img:hover {
+      transform: scale(1.05);
+    }
+
+    .place h2 {
+      margin-top: 10px;
+    }
+
+    .map-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background-color: rgba(86, 135, 100, 0.9);
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 0.95em;
+    }
+
+    .map-link:hover {
+      background-color: rgba(64, 104, 77, 0.9);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 28px;
+      background-color: rgba(43, 91, 63, 0.9);
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    .back-button:hover {
+      background-color: rgba(31, 64, 45, 0.9);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🗺️ Lugares cercanos a Villa Congos</h1>
+
+  <div class="place">
+    <h2>Catarata del Toro</h2>
+    <p>A 10 minutos en carro. Caminata moderada de 25 minutos por sendero natural.</p>
+    <a class="map-link" href="https://maps.app.goo.gl/NjsbGJAYX4gR6xFz8">📍 Ver en Google Maps</a><br>
+    <img src="cataratadeltoro1.jpg" onclick="openImage(this.src)" />
+    <img src="cataratadeltoro2.jpg" onclick="openImage(this.src)" />
+    <img src="cataratadeltoro3.jpg" onclick="openImage(this.src)" />
+  </div>
+
+  <div class="place">
+    <h2>Cataratas Las Gemelas</h2>
+    <p>A 10 minutos de la cabaña. Caminata fuerte de 1 hora entre barro y vegetación.</p>
+    <a class="map-link" href="https://maps.app.goo.gl/fmfh5nzYdpwcHHdn6">📍 Ver en Google Maps</a><br>
+    <img src="lasgemelas1.jpg" onclick="openImage(this.src)" />
+    <img src="lasgemelas3.jpg" onclick="openImage(this.src)" />
+    <img src="lasgemelas2.jpg" onclick="openImage(this.src)" />
+
+  </div>
+
+  <div class="place">
+    <h2>Pozas La Presa</h2>
+    <p>Poza gratuita a 5 minutos en carro y 5 minutos caminando.</p>
+    <a class="map-link" href="https://maps.app.goo.gl/DRw7ptUJx8ku93VZ9">📍 Ver en Google Maps</a><br>
+    <img src="lapresa1.jpg" onclick="openImage(this.src)" />
+    <img src="lapresa2.jpg" onclick="openImage(this.src)" />
+    <img src="lapresa3.jpg" onclick="openImage(this.src)" />
+  </div>
+
+  <div class="place">
+    <h2>Tesoro Escondido</h2>
+    <p>Accesible en 15 minutos en carro. Caminata moderada de 30 minutos. Entrada con costo.</p>
+    <a class="map-link" href="https://maps.app.goo.gl/uk3sTjewc4KvC6gb7">📍 Ver en Google Maps</a><br>
+    <img src="TesoroEscondido1.jpg" onclick="openImage(this.src)" />
+    <img src="TesoroEscondido2.jpg" onclick="openImage(this.src)" />
+    <img src="TesoroEscondido3.jpg" onclick="openImage(this.src)" />
+  </div>
+
+  <div class="place">
+    <h2>Catarata Río Agrio</h2>
+    <p>A solo 8 minutos en carro. Caminata accesible para toda la familia. Animatronics de dinosaurios y el tobogán seco más grande Costa Rica.</p>
+    <a class="map-link" href="https://maps.app.goo.gl/smR6yaBLtCBfUkkF9">📍 Ver en Google Maps</a><br>
+    <img src="rioagrio1.jpg" onclick="openImage(this.src)" />
+    <img src="rioagrio2.jpg" onclick="openImage(this.src)" />
+    <img src="rioagrio3.jpg" onclick="openImage(this.src)" />
+  </div>
+
+    <div class="place">
+    <h2>Pozas Celestes</h2>
+    <p>A solo 8 minutos en carro. Se puede hacer un paquete con Río Agrio para visitar ambos lugares</p>
+    <a class="map-link" href="https://maps.app.goo.gl/smR6yaBLtCBfUkkF9">📍 Ver en Google Maps</a><br>
+    <img src="PozasCelestes2.png" onclick="openImage(this.src)" />
+    <img src="pozascelestes.jpg" onclick="openImage(this.src)" />
+    <img src="pozascelestes3.jpg" onclick="openImage(this.src)" />
+  </div>
+
+
+  <div class="place">
+    <h2>Finca San Rafael</h2>
+    <p>A 500 metros de las cabañas. Deliciosas cataras y pozas de agua cristalina. Entrada pequeña y acceso fácil.</p>
+    <a class="map-link" href="https://maps.app.goo.gl/yycCcUpxNDmnxBQE8">📍 Ver en Google Maps</a><br>
+    <img src="toroamarillo2.jpg" onclick="openImage(this.src)" />
+    <img src="toroamarillo3.jpg" onclick="openImage(this.src)" />
+    <img src="toroamarillo4.jpg" onclick="openImage(this.src)" />
+  </div>
+
+  <div class="place">
+    <h2>Catarata Caída del Cielo</h2>
+    <p>A 15 minutos en vehículo, caminata moderada de al menos una hora.</p>
+    <a class="map-link" href="https://maps.app.goo.gl/US8r8brhzspjR9rC7">📍 Ver en Google Maps</a><br>
+    <img src="caidadelcielo1.png" onclick="openImage(this.src)" />
+    <img src="caidadelcielo2.png" onclick="openImage(this.src)" />
+    <img src="caidadelcielo3.png" onclick="openImage(this.src)" />
+  </div>
+
+  <!-- Restaurantes y minisúper -->
+  <div class="place">
+    <h2>Restaurante La Casona del Toro</h2>
+    <p>A 8 minutos en carro. Comida típica costarricense, ambiente rústico.</p>
+    <a class="map-link" href="https://maps.app.goo.gl/rEKEPBtW5uhyEmPa7">📍 Ver en Google Maps</a><br>
+    <img src="casona1.png" onclick="openImage(this.src)" />
+    <img src="casona2.png" onclick="openImage(this.src)" />
+    <img src="casona3.png" onclick="openImage(this.src)" />
+  </div>
+
+  <div class="place">
+    <h2>Restaurante Tiquicia</h2>
+    <p>A 5 minutos en carro desde la cabaña. Menú variado y vista al bosque.</p>
+    <a class="map-link" href="https://maps.app.goo.gl/5ebVu5kqtBZuoqCA7">📍 Ver en Google Maps</a><br>
+    <img src="tiquicia1.png" onclick="openImage(this.src)" />
+    <img src="tiquicia2.png" onclick="openImage(this.src)" />
+    <img src="tiquicia3.png" onclick="openImage(this.src)" />
+  </div>
+
+  <div class="place">
+    <h2>Supermercado El Progreso</h2>
+    <p>Ubicado en el centro del pueblo, a 6 minutos en carro.</p>
+    <a class="map-link" href="https://maps.app.goo.gl/CFW3uksmZuxbNVeU6">📍 Ver en Google Maps</a><br>
+    <img src="elprogreso1.png" onclick="openImage(this.src)" />
+    <img src="elprogreso2.png" onclick="openImage(this.src)" />
+    <img src="elprogreso3.png" onclick="openImage(this.src)" />
+  </div>
+
+  <div class="place">
+    <h2>Mini Súper Bajos del Toro</h2>
+    <p>Pequeño supermercado con productos básicos. A 5 minutos en carro.</p>
+    <a class="map-link" href="https://maps.app.goo.gl/2AjHYzr2ooWW5kZg6">📍 Ver en Google Maps</a><br>
+    <img src="minisuper1.png" onclick="openImage(this.src)" />
+    <img src="minisuper2.png" onclick="openImage(this.src)" />
+    <img src="minisuper3.png" onclick="openImage(this.src)" />
+  </div>
+
+  <a class="back-button" href="index.html">🔙 Volver a la página principal</a>
+
+  <script>
+    function openImage(src) {
+      const newWindow = window.open();
+      newWindow.document.write('<img src="' + src + '" style="width:100%">');
+    }
+  </script>
+
+</body>
+</html>
