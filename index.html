@@ -56,6 +56,8 @@
       font-weight: bold;
       font-size: 1.1em;
       transition: background 0.3s;
+      cursor: pointer;
+      border: none;
     }
 
     .link-button:hover {
@@ -91,6 +93,40 @@
       display: block;
     }
 
+    /* Contenedor para PDF embebido */
+    #pdfContainer {
+      display: none;
+      margin-top: 20px;
+      position: relative;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #closePdfBtn {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      padding: 8px 14px;
+      background-color: rgba(43, 91, 63, 0.9);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #closePdfBtn:hover {
+      background-color: rgba(31, 64, 45, 0.9);
+    }
+
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      border-radius: 12px;
+    }
   </style>
 </head>
 <body>
@@ -107,22 +143,56 @@
 
   <a class="link-button" href="lugares.html">¿Qué hay cerca de la cabaña? 🏡</a>
 
-  <a class="link-button" href="https://drive.google.com/file/d/1EhxNaf1vX06tkd_GsUsBapSZEWyzCupB/view" target="_blank">🗺️ Ver Mapa Bajos del Toro</a>
+  <!-- Botón modificado para abrir PDF embebido -->
+  <button id="openPdfBtn" class="link-button">🗺️ Ver PDF Bajos del Toro</button>
+
+  <!-- Contenedor para PDF embebido -->
+  <div id="pdfContainer">
+    <button id="closePdfBtn">Cerrar PDF ✖️</button>
+    <iframe
+      src="https://drive.google.com/file/d/1EhxNaf1vX06tkd_GsUsBapSZEWyzCupB/preview"
+      allowfullscreen
+      loading="lazy"
+      title="PDF Bajos del Toro"
+    ></iframe>
+  </div>
+
   <!-- Iconos sin fondo -->
-<div class="icon-buttons">
-  <a href="https://maps.app.goo.gl/JVzqmR8uTh5FVPZp7?g_st=com.google.maps.preview.copy" target="_blank" aria-label="Google Maps">
-    <img src="iconos/google-maps-old.svg" alt="Maps" />
-  </a>
+  <div class="icon-buttons">
+    <a href="https://maps.app.goo.gl/JVzqmR8uTh5FVPZp7?g_st=com.google.maps.preview.copy" target="_blank" aria-label="Google Maps">
+      <img src="iconos/google-maps-old.svg" alt="Maps" />
+    </a>
 
-  <a href="https://www.instagram.com/villacongos/" target="_blank" aria-label="Instagram">
-    <img src="iconos/instagram.svg" alt="Instagram" />
-  </a>
+    <a href="https://www.instagram.com/villacongos/" target="_blank" aria-label="Instagram">
+      <img src="iconos/instagram.svg" alt="Instagram" />
+    </a>
 
-  <a href="https://waze.com/ul/hd1u467y5m" target="_blank" aria-label="Waze">
-    <img src="iconos/waze.svg" alt="Waze" />
-  </a>
+    <a href="https://waze.com/ul/hd1u467y5m" target="_blank" aria-label="Waze">
+      <img src="iconos/waze.svg" alt="Waze" />
+    </a>
 
-  <a href="https://wa.me/50687803446?text=Hola%2C%20me%20interesa%20tener%20m%C3%A1s%20informaci%C3%B3n%20con%20respecto%20al%20hospedaje%20en%20Villa%20Congos" target="_blank" aria-label="WhatsApp">
-    <img src="iconos/whatsapp.svg" alt="WhatsApp" />
-  </a>
-</div>
+    <a href="https://wa.me/50687803446?text=Hola%2C%20me%20interesa%20tener%20m%C3%A1s%20informaci%C3%B3n%20con%20respecto%20al%20hospedaje%20en%20Villa%20Congos" target="_blank" aria-label="WhatsApp">
+      <img src="iconos/whatsapp.svg" alt="WhatsApp" />
+    </a>
+  </div>
+
+  <script>
+    const openPdfBtn = document.getElementById('openPdfBtn');
+    const closePdfBtn = document.getElementById('closePdfBtn');
+    const pdfContainer = document.getElementById('pdfContainer');
+
+    openPdfBtn.addEventListener('click', () => {
+      pdfContainer.style.display = 'block';
+      openPdfBtn.style.display = 'none';
+      window.scrollTo({ top: pdfContainer.offsetTop, behavior: 'smooth' });
+    });
+
+    closePdfBtn.addEventListener('click', () => {
+      pdfContainer.style.display = 'none';
+      openPdfBtn.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>
