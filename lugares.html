@@ -93,7 +93,6 @@
     <img src="lasgemelas1.jpg" onclick="openImage(this.src)" />
     <img src="lasgemelas3.jpg" onclick="openImage(this.src)" />
     <img src="lasgemelas2.jpg" onclick="openImage(this.src)" />
-
   </div>
 
   <div class="place">
@@ -123,7 +122,7 @@
     <img src="rioagrio3.jpg" onclick="openImage(this.src)" />
   </div>
 
-    <div class="place">
+  <div class="place">
     <h2>Pozas Celestes</h2>
     <p>A solo 8 minutos en carro. Se puede hacer un paquete con Río Agrio para visitar ambos lugares</p>
     <a class="map-link" href="https://maps.app.goo.gl/smR6yaBLtCBfUkkF9">📍 Ver en Google Maps</a><br>
@@ -131,7 +130,6 @@
     <img src="pozascelestes.jpg" onclick="openImage(this.src)" />
     <img src="pozascelestes3.jpg" onclick="openImage(this.src)" />
   </div>
-
 
   <div class="place">
     <h2>Finca San Rafael</h2>
@@ -142,58 +140,37 @@
     <img src="toroamarillo4.jpg" onclick="openImage(this.src)" />
   </div>
 
-  <!-- Restaurantes y minisúper -- <div class="place">
-    <h2>Catarata Caída del Cielo</h2>
-    <p>A 15 minutos en vehículo, caminata moderada de al menos una hora.</p>
-    <a class="map-link" href="https://maps.app.goo.gl/US8r8brhzspjR9rC7">📍 Ver en Google Maps</a><br>
-    <img src="caidadelcielo1.png" onclick="openImage(this.src)" />
-    <img src="caidadelcielo2.png" onclick="openImage(this.src)" />
-    <img src="caidadelcielo3.png" onclick="openImage(this.src)" />
-  </div>
-
-  <!-- Restaurantes y minisúper --
-  <div class="place">
-    <h2>Restaurante La Casona del Toro</h2>
-    <p>A 8 minutos en carro. Comida típica costarricense, ambiente rústico.</p>
-    <a class="map-link" href="https://maps.app.goo.gl/rEKEPBtW5uhyEmPa7">📍 Ver en Google Maps</a><br>
-    <img src="casona1.png" onclick="openImage(this.src)" />
-    <img src="casona2.png" onclick="openImage(this.src)" />
-    <img src="casona3.png" onclick="openImage(this.src)" />
-  </div>
-
-  <div class="place">
-    <h2>Restaurante Tiquicia</h2>
-    <p>A 5 minutos en carro desde la cabaña. Menú variado y vista al bosque.</p>
-    <a class="map-link" href="https://maps.app.goo.gl/5ebVu5kqtBZuoqCA7">📍 Ver en Google Maps</a><br>
-    <img src="tiquicia1.png" onclick="openImage(this.src)" />
-    <img src="tiquicia2.png" onclick="openImage(this.src)" />
-    <img src="tiquicia3.png" onclick="openImage(this.src)" />
-  </div>
-
-  <div class="place">
-    <h2>Supermercado El Progreso</h2>
-    <p>Ubicado en el centro del pueblo, a 6 minutos en carro.</p>
-    <a class="map-link" href="https://maps.app.goo.gl/CFW3uksmZuxbNVeU6">📍 Ver en Google Maps</a><br>
-    <img src="elprogreso1.png" onclick="openImage(this.src)" />
-    <img src="elprogreso2.png" onclick="openImage(this.src)" />
-    <img src="elprogreso3.png" onclick="openImage(this.src)" />
-  </div>
-
-  <div class="place">
-    <h2>Mini Súper Bajos del Toro</h2>
-    <p>Pequeño supermercado con productos básicos. A 5 minutos en carro.</p>
-    <a class="map-link" href="https://maps.app.goo.gl/2AjHYzr2ooWW5kZg6">📍 Ver en Google Maps</a><br>
-    <img src="minisuper1.png" onclick="openImage(this.src)" />
-    <img src="minisuper2.png" onclick="openImage(this.src)" />
-    <img src="minisuper3.png" onclick="openImage(this.src)" />
-  </div>
-
   <a class="back-button" href="index.html">🔙 Volver a la página principal</a>
+
+  <!-- Modal para ver imagen -->
+  <div id="imageModal" onclick="closeModal()" style="
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);">
+    <img id="modalImg" style="
+      margin: auto;
+      display: block;
+      max-width: 90%;
+      max-height: 90%;
+      margin-top: 5%;">
+  </div>
 
   <script>
     function openImage(src) {
-      const newWindow = window.open();
-      newWindow.document.write('<img src="' + src + '" style="width:100%">');
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImg");
+      modal.style.display = "block";
+      modalImg.src = src;
+    }
+
+    function closeModal() {
+      document.getElementById("imageModal").style.display = "none";
     }
   </script>
 
