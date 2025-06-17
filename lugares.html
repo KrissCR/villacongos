@@ -7,9 +7,8 @@
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: url('fondo2.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #fff;
+      background-color: #ffffff;
+      color: #333;
       text-align: center;
       padding: 40px;
     }
@@ -17,14 +16,15 @@
     h1 {
       font-size: 2.2em;
       margin-bottom: 30px;
-      text-shadow: 2px 2px 4px #000;
+      color: #333;
     }
 
     .place {
       margin-bottom: 40px;
-      background: rgba(0, 0, 0, 0.6);
+      background: #f9f9f9;
       padding: 20px;
       border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
 
     .place img {
@@ -41,13 +41,14 @@
 
     .place h2 {
       margin-top: 10px;
+      color: #222;
     }
 
     .map-link {
       display: inline-block;
       margin-top: 10px;
       padding: 8px 14px;
-      background-color: rgba(86, 135, 100, 0.9);
+      background-color: #568764;
       color: white;
       text-decoration: none;
       border-radius: 8px;
@@ -55,14 +56,14 @@
     }
 
     .map-link:hover {
-      background-color: rgba(64, 104, 77, 0.9);
+      background-color: #40684d;
     }
 
     .back-button {
       display: inline-block;
       margin-top: 30px;
       padding: 14px 28px;
-      background-color: rgba(43, 91, 63, 0.9);
+      background-color: #2b5b3f;
       color: white;
       text-decoration: none;
       border-radius: 10px;
@@ -71,7 +72,7 @@
     }
 
     .back-button:hover {
-      background-color: rgba(31, 64, 45, 0.9);
+      background-color: #1f402d;
     }
   </style>
 </head>
@@ -156,7 +157,6 @@
     overflow: auto;
     background-color: rgba(0,0,0,0.9);">
 
-    <!-- Botón de cerrar -->
     <span onclick="closeModal()" style="
       position: absolute;
       top: 20px;
@@ -167,7 +167,6 @@
       cursor: pointer;
       z-index: 10000;">&times;</span>
 
-    <!-- Imagen ampliada -->
     <img id="modalImg" style="
       margin: auto;
       display: block;
